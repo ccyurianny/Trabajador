@@ -22,7 +22,7 @@ class CreateTrabajadoresTable extends Migration
             $table->string('apellido');
             $table->string('correo');
             $table->string('estatus');
-            $table->integer('cargo');
+            $table->string('cargo');
             $table->SoftDeletes();
             $table->timestamps();
         });

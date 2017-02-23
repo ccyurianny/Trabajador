@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('trabajadores','TrabajadorController');
-Route::get('cargos', 'TrabajadorController@BuscarCargos');
+//Route::get('cargos', 'TrabajadorController@BuscarCargos');
