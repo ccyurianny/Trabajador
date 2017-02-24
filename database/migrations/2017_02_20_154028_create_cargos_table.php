@@ -17,6 +17,7 @@ class CreateCargosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->timestamps();
+            $table->SoftDeletes();
         });
     }
 

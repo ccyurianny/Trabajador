@@ -46,6 +46,8 @@ class TrabajadorController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->all());
+
         Trabajador::create($request->all());
         return response()->json(["mensaje"=>"Trabajador Registrado"]);
     }
@@ -108,9 +110,10 @@ class TrabajadorController extends Controller
     }
 
 
-   /* public function BuscarCargos()
+    public function BuscarCargos()
     {
         $cargos = Cargo::all();
         return  response()->json($cargos->toArray());
-    }*/
+
+    }
 }

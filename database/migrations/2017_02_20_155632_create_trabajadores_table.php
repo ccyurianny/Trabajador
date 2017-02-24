@@ -22,7 +22,8 @@ class CreateTrabajadoresTable extends Migration
             $table->string('apellido');
             $table->string('correo');
             $table->string('estatus');
-            $table->string('cargo');
+            $table->integer('idcargo')->unsigned();
+            $table->foreign('idcargo')->references('id')->on('cargo');
             $table->SoftDeletes();
             $table->timestamps();
         });
