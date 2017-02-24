@@ -15,8 +15,6 @@ class CreateTrabajadoresTable extends Migration
     {
         Schema::create('trabajador', function (Blueprint $table) {
             $table->increments('id');
-            /*$table->integer('idcargo')->unsigned();
-            $table->foreign('idcargo')->references('id')->on('cargo');*/
             $table->string('cedula')->unique();
             $table->string('nombre');
             $table->string('apellido');
