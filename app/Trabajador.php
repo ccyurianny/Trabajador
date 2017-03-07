@@ -11,4 +11,9 @@ class Trabajador extends Model
     protected $table = 'trabajador';
     protected $fillable = ['cedula','nombre','apellido','correo','estatus','idcargo'];
     protected $dates = ['deleted_at'];
+
+    public function cargo() {
+        return $this->hasOne('App\Cargo', 'id'); // relacion con el atributo id
+    }
+
 }

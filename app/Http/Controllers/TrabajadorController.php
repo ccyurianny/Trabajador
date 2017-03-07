@@ -6,7 +6,8 @@ use CrudTrabajador\Cargo;
 use CrudTrabajador\Trabajador;
 use Illuminate\Http\Request;
 
-use CrudTrabajador\Http\Requests;
+//use CrudTrabajador\Http\Requests;
+use CrudTrabajador\Http\Requests\CrearTrabajador;
 use Illuminate\Routing\Route;
 
 class TrabajadorController extends Controller
@@ -44,10 +45,8 @@ class TrabajadorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CrearTrabajador $request)
     {
-        //dd($request->all());
-
         Trabajador::create($request->all());
         return response()->json(["mensaje"=>"Trabajador Registrado"]);
     }
