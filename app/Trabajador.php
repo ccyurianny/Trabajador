@@ -13,7 +13,7 @@ class Trabajador extends Model
     protected $dates = ['deleted_at'];
 
     public function cargo() {
-        return $this->hasOne('App\Cargo', 'id'); // relacion con el atributo id
+        return $this->hasOne(Cargo::class, 'idcargo'); // relacion con el atributo id
     }
 
 }

@@ -12,4 +12,9 @@ class Cargo extends Model
     protected $table = 'cargo';
     protected $fillable = ['nombre'];
     protected $dates = ['deleted_at'];
+
+    public function trabajador()
+    {
+        return $this->hasOne(Trabajador::class, 'idcargo');
+    }
 }
